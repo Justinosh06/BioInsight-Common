@@ -1,4 +1,4 @@
-export function getCurrentLocation(): Promise<GeolocationPosition> {
+export async function getCurrentLocation(): Promise<GeolocationPosition> {
     return new Promise((resolve, reject) => {
         if (!navigator.geolocation) {
             reject(new Error('Geolocation is not supported by this browser.'))
@@ -8,7 +8,7 @@ export function getCurrentLocation(): Promise<GeolocationPosition> {
             reject,
             {
                 enableHighAccuracy: true,
-                timeout: 1000,
+                timeout: 100000,
             }
         )
     })
