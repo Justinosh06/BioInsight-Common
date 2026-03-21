@@ -6,7 +6,15 @@ export interface DiagnosisType {
     timestamp: string | Date
 
     zone_id: number
-    disease_id: number
+    disease_id: string
     current_weather_id: number
     ai_data_id: number
+
+    disease?: string
+    disease_name?: string
+    user_name?: string
+    image?: string
+    description?: string
+    severityCategory?: string
+    confidence_level?: number
 }
